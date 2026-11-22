@@ -1,0 +1,31 @@
+# Original art and local previews
+/原图/
+/output/
+/docs/文创/旧版/
+
+# Desktop binary and local dependency/build outputs
+/server/*.exe
+node_modules/
+*.webm
+/_site/
+/web-release/
+/dist/
+/www/
+/.gradle/
+**/android/.gradle/
+**/android/app/build/
+
+# Local Android configuration and signing files
+local.properties
+*.jks
+*.keystore
+signing-key-info.txt
+*.p12
+*.apk
+*.aab
+.env
+.env.local
+
+# OS metadata
+.DS_Store
+Thumbs.db

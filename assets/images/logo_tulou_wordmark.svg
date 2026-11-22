@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="768" viewBox="0 0 768 384" role="img" aria-labelledby="title">
+  <title id="title">方向 C · 土楼二字拟形字标</title>
+  <!-- 横向锐角赛事底板 -->
+  <path fill="#14100E" d="M66 31 H716 L753 81 L744 311 L702 353 H52 L15 303 L24 77 Z"/>
+  <path fill="#F5B316" d="M73 39 H711 L744 84 L735 307 L697 345 H57 L24 300 L33 81 Z"/>
+  <path fill="#14100E" d="M79 48 H706 L735 87 L726 303 L691 336 H62 L33 297 L42 86 Z"/>
+  <path fill="#C8102E" d="M45 108 L62 82 H130 L112 91 H69 L54 114 Z M723 275 L706 302 H638 L657 292 H699 L713 269 Z"/>
+  <path fill="#C8102E" d="M59 318 H263 L248 327 H69 Z M509 56 H692 L703 65 H492 Z"/>
+
+  <g transform="translate(186 0) scale(.90 1) translate(-186 0)">
+    <!-- 土：红缨长枪、燕尾脊短横与偃月刀长横 -->
+    <path fill="#F5B316" stroke="#14100E" stroke-width="8" stroke-linejoin="round"
+          d="M178 275 L180 110 L171 92 L189 68 L208 92 L199 110 L201 275 L188 295 Z"/>
+    <path fill="#FFFFFF" d="M189 78 L200 93 L189 100 L184 94 Z"/>
+    <path fill="#C8102E" d="M195 108 L214 98 L236 104 L252 99 L244 114 L229 126 L207 124 L196 130 Z"/>
+    <path fill="#F5B316" stroke="#14100E" stroke-width="7" stroke-linejoin="round"
+          d="M105 155 Q118 149 121 124 Q135 147 153 149 H227 Q247 147 260 124 Q263 149 276 155
+             L260 172 L233 181 H148 L121 172 Z"/>
+    <path fill="#C8102E" d="M117 155 L124 140 Q137 155 154 158 H228 Q244 155 258 140 L266 155
+             L253 164 L231 172 H150 L129 164 Z"/>
+    <path fill="#F5B316" stroke="#14100E" stroke-width="8" stroke-linejoin="round"
+          d="M77 255 H235 L252 249 L275 254 L297 246 L317 226 L316 247 L304 270 L280 285 H76 L62 273 Z"/>
+    <path fill="#C8102E" d="M81 265 H254 L271 259 L284 263 L270 274 H78 Z"/>
+    <path fill="#FFFFFF" d="M278 266 L299 251 L310 241 L300 263 L284 274 L265 276 Z"/>
+  </g>
+
+  <g transform="translate(-12 0)">
+    <!-- 所有娄字笔画保留在俯视土楼环内 -->
+    <path fill="none" stroke="#C8102E" stroke-width="9"
+          d="M491 188 A113 113 0 0 1 717 188 M717 204 A113 113 0 0 1 491 204"/>
+    <path fill="none" stroke="#F5B316" stroke-width="3"
+          d="M503 169 A104 104 0 0 1 577 97 M632 97 A104 104 0 0 1 704 169 M704 220 A104 104 0 0 1 632 295 M577 295 A104 104 0 0 1 503 220"/>
+    <path fill="#F5B316" d="M597 78 H611 V96 H597 Z M597 296 H611 V314 H597 Z M480 189 H499 V202 H480 Z M710 189 H728 V202 H710 Z"/>
+  </g>
+
+  <g transform="translate(27 0)">
+    <!-- 木：帽冠是竖画上端，左右布袖和袍身组成其余四笔 -->
+    <path fill="#F5B316" stroke="#14100E" stroke-width="8" stroke-linejoin="round"
+          d="M383 81 L400 73 L413 89 L412 134 L448 141 L466 158 L450 178 L416 174
+             L437 214 L468 245 L452 264 L421 239 L412 226 L409 292 L386 312
+             L382 232 L356 263 L328 275 L338 247 L378 177 L337 183 L323 169 L336 150
+             L382 139 Z"/>
+    <path fill="#C8102E" d="M381 96 L394 77 L410 89 L414 104 L427 102 L418 122 L391 127 L368 119 L364 104 Z"/>
+    <path fill="#14100E" d="M378 105 L392 98 L411 104 L410 119 L391 126 L378 118 Z"/>
+    <path fill="#FFFFFF" d="M380 106 L390 108 L389 113 L382 112 Z M397 108 L408 105 L405 112 L397 113 Z"/>
+    <path fill="#C8102E" d="M390 190 L403 184 L401 280 L390 293 Z
+            M337 166 L350 153 L373 149 L368 163 L346 174 Z M446 150 L457 158 L449 168 L431 161 Z"/>
+  </g>
+
+  <g transform="translate(-12 0)">
+    <!-- 米 -->
+    <path fill="#F5B316" d="M595 108 L610 104 V190 L595 189 Z M543 140 H665 L658 155 H541 Z"/>
+    <path fill="#F5B316" d="M558 111 L576 119 L582 133 L570 136 L551 119 Z M646 110 L657 118 L638 136 L625 133 Z"/>
+    <path fill="#F5B316" d="M590 148 L603 156 L568 188 L539 197 L551 181 Z
+            M608 147 L619 152 L669 188 L661 197 L640 188 L605 161 Z"/>
+    <!-- 女 -->
+    <path fill="#F5B316" d="M588 194 L607 191 L585 224 L619 247 L650 267 L638 285 L606 260 L566 235 L557 222 Z"/>
+    <path fill="#F5B316" d="M629 208 L645 214 L634 245 L618 268 L583 286 L555 291 L563 276 L593 266 L611 245 Z"/>
+    <path fill="#F5B316" d="M544 214 H666 L658 230 H541 Z"/>
+    <path fill="#FFFFFF" d="M599 196 L608 194 L602 204 L594 205 Z"/>
+  </g>
+
+</svg>

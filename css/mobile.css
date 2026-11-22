@@ -1,0 +1,51 @@
+body { touch-action: manipulation; }
+
+@supports (height: 100dvh) {
+  #app { width: min(100%, calc(100dvh * 16 / 9)); }
+}
+
+:fullscreen body { background: #0e0d12; }
+
+#rotate-tip {
+  z-index: 110;
+  padding: 24px;
+  text-align: center;
+}
+
+@media (orientation: portrait) and (pointer: coarse),
+       (orientation: portrait) and (max-width: 700px) {
+  #app { visibility: hidden; }
+  #rotate-tip { display: flex; }
+}
+
+@media (pointer: coarse) {
+  #app :is(button:not(.menu-object), a.btn, #screen-versus input, #screen-versus select) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  #app #intro-action { touch-action: manipulation; }
+  #app canvas#game { touch-action: none; }
+  #app :is(#map-info-close, #gallery-close) { min-width: 44px; min-height: 44px; }
+  #map-info-title { margin-right: 38px; }
+  .gallery-detail-copy { padding-right: 36px; }
+  .menu-ready #menu-text-buttons { top: calc(1.25cqw + max(44px, 2.8cqw) + 4px); }
+
+  #commentary { top: max(5cqw, 53px); }
+  #app:has(#vs-ui:not(.hidden)) #commentary { top: auto; bottom: max(8cqw, 59px); }
+  #app:has(#vs-ui:not([data-net-role], .hidden)) #commentary { bottom: 105px; }
+
+  /* 同屏有两套按钮。各占两行，让两个玩家的触控区域互不重叠。 */
+  #vs-ui:not([data-net-role]) .vs-panel {
+    display: grid;
+    grid-template-columns: minmax(44px, 5.6cqw) 1.2cqw repeat(3, 44px) max(47px, 6.6cqw);
+    grid-template-rows: repeat(2, 44px);
+    gap: 3px;
+  }
+  #vs-ui:not([data-net-role]) .vp-info { grid-area: 1 / 1 / 3 / 2; justify-content: space-around; }
+  #vs-ui:not([data-net-role]) .vp-row { display: contents; }
+  #vs-ui:not([data-net-role]) .vp-lbl { justify-self: center; align-self: center; }
+  #vs-ui:not([data-net-role]) .vp-ult { grid-area: 1 / 6 / 3 / 7; width: 100%; }
+  #vs-ui:not([data-net-role]) .vp-hero,
+  #vs-ui:not([data-net-role]) .vp-send { width: 44px; height: 44px; }
+}

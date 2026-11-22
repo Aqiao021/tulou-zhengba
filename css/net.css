@@ -1,0 +1,250 @@
+/* 局域网房间与本机对战入口 */
+#screen-versus {
+  --room-gold: #f2ca79;
+  --room-ivory: #fff1d7;
+  --room-muted: #e5bfa9;
+  --room-border: #c991526b;
+  color: var(--room-ivory);
+  background: linear-gradient(0deg, #1b0c12 0%, #211017eb 60%, #1e1018d9),
+    url("../assets/images/bg_versus.png") center / cover, #1b0c12;
+  isolation: isolate;
+}
+#screen-versus::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at 12% 46%, #b5214730, transparent 69%),
+    radial-gradient(ellipse at 81% 6%, #a16b2425, transparent 58%),
+    repeating-linear-gradient(90deg, transparent 0 6cqw, #f2ca7910 6cqw calc(6cqw + 1px)),
+    repeating-linear-gradient(0deg, transparent 0 6cqw, #f2ca7910 6cqw calc(6cqw + 1px));
+  content: '';
+}
+#screen-versus [hidden], .net-reconnect[hidden], .net-notice[hidden] { display: none !important; }
+.net-heading {
+  position: absolute;
+  inset: 3.1cqw 4.5cqw auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.net-heading h2 {
+  padding: 0 2.5cqw .65cqw;
+  color: #ffe2a1;
+  border-bottom: 1px solid #dba95c85;
+  font: 700 4.15cqw/1.16 var(--title-font);
+  letter-spacing: .12em;
+  text-shadow: 0 .22cqw #661d22;
+}
+.net-shell { width: 84cqw; margin-top: 4.8cqw; }
+.net-modes { display: grid; grid-template-columns: 1.08fr 1fr; gap: 2.2cqw; }
+.net-mode {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.4cqw;
+  min-height: 15.8cqw;
+  padding: 2.4cqw 2.8cqw;
+  border: 1px solid #d9a05c85;
+  border-radius: 1cqw;
+  color: var(--room-gold);
+  background: linear-gradient(134deg, #47262c, #241820);
+  box-shadow: inset 0 0 0 .26cqw #1a0d14, 0 .65cqw 1.4cqw #10070e75;
+  text-align: left;
+  cursor: pointer;
+}
+.net-mode::after {
+  position: absolute;
+  top: 50%;
+  right: 2.4cqw;
+  width: 1.15cqw;
+  height: 1.15cqw;
+  border: solid currentColor;
+  border-width: .23cqw .23cqw 0 0;
+  transform: translateY(-50%) rotate(45deg);
+  content: '';
+}
+.net-mode:hover, .net-mode:focus-visible { background: linear-gradient(134deg, #603035, #382028); }
+.net-mode-primary {
+  color: #ffd583;
+  border-color: #ffc05d;
+  background: linear-gradient(112deg, #97332e, #622030 65%, #421524);
+}
+.net-mode-primary:hover, .net-mode-primary:focus-visible {
+  background: linear-gradient(112deg, #a23d32, #782137 65%, #521526);
+}
+.net-mode-title { font: 800 3.55cqw/1 var(--title-font); letter-spacing: .07em; }
+.net-mode-detail { color: var(--room-ivory); font: 500 1.6cqw/1.4 system-ui, sans-serif; }
+.net-pane {
+  padding: 2.35cqw;
+  border: 1px solid #cc965d8c;
+  border-radius: 1.25cqw;
+  background: linear-gradient(155deg, #38222cfa, #24151ff7);
+  box-shadow: 0 .7cqw 1.7cqw #0e060d8c, inset 0 0 0 .28cqw #1f111a;
+}
+.net-offline { display: grid; justify-items: center; gap: 3cqw; text-align: center; }
+.net-offline p { font-size: 2.1cqw; line-height: 1.55; }
+.net-offline p + p { margin-top: .65cqw; }
+#screen-versus[data-lan-environment="web"] #net-mode-detail { color: #ffcf87; }
+.net-lan {
+  display: grid;
+  grid-template-rows: auto minmax(14cqw, auto) auto;
+  gap: 2cqw;
+}
+.net-identity {
+  display: grid;
+  grid-template-columns: auto minmax(13cqw, 21cqw) 1fr auto;
+  align-items: center;
+  gap: 1.2cqw;
+  color: var(--room-muted);
+  font-size: 1.48cqw;
+}
+#net-role { color: var(--room-gold); white-space: nowrap; }
+#net-latency { white-space: nowrap; font-variant-numeric: tabular-nums; }
+#screen-versus input, #screen-versus select {
+  min-width: 0;
+  min-height: 3.45cqw;
+  padding: .4cqw .92cqw;
+  border: 1px solid var(--room-border);
+  border-radius: .55cqw;
+  color: var(--room-ivory);
+  background: #1f121bc7;
+  font: inherit;
+  user-select: text;
+}
+#screen-versus input::placeholder { color: #b89b91; }
+#net-join-form input { max-width: 9.4cqw; font-variant-numeric: tabular-nums; }
+#net-join-form #net-host { max-width: none; width: 29cqw; user-select: text; }
+.net-entry {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5cqw;
+}
+.net-entry form { display: flex; align-items: center; gap: .9cqw; color: var(--room-muted); font-size: 1.5cqw; }
+.net-lan .btn {
+  width: fit-content;
+  min-width: 10cqw;
+  padding: .58cqw 1.3cqw;
+  font-size: 1.8cqw;
+  letter-spacing: .05em;
+  white-space: nowrap;
+}
+.net-message { min-height: 1.8cqw; color: #ffcf9c; font-size: 1.4cqw; line-height: 1.3; }
+.net-app-hint { color: var(--room-muted); font-size: 1.4cqw; line-height: 1.45; }
+.net-lobby { display: grid; grid-template-columns: 1.08fr 1fr; gap: 2cqw; }
+.net-invite, .net-seats { min-width: 0; }
+.net-invite {
+  display: grid;
+  grid-template-columns: 12cqw minmax(0, 1fr);
+  align-items: center;
+  gap: 1.3cqw;
+  padding: 1.2cqw;
+  border: 1px solid var(--room-border);
+  border-radius: .8cqw;
+  background: #271720;
+}
+#net-qr {
+  display: grid;
+  width: 12cqw;
+  height: 12cqw;
+  place-items: center;
+  padding: 1.35cqw;
+  border-radius: .35cqw;
+  color: #32221b;
+  background: #fff;
+  text-align: center;
+  font-size: 1.35cqw;
+}
+#net-qr canvas, #net-qr img { width: 100%; height: auto; image-rendering: pixelated; }
+.net-invite-text { display: grid; justify-items: start; gap: .65cqw; }
+.net-code-row { display: flex; align-items: center; gap: .7cqw; font-size: 1.3cqw; color: var(--room-muted); }
+#net-room-code { color: #ffdc96; font-size: 3cqw; font-variant-numeric: tabular-nums; letter-spacing: .12em; }
+.net-address-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  gap: .55cqw;
+  color: var(--room-muted);
+  font-size: 1.12cqw;
+}
+#net-address { min-height: 2.55cqw; padding: .2cqw .35cqw; }
+#net-invite-url {
+  width: 100%;
+  color: var(--room-ivory);
+  font-size: 1.25cqw;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+#net-copy { font-size: 1.3cqw; }
+#screen-versus[data-lan-environment="android"] .net-invite { grid-template-columns: minmax(0, 1fr); }
+#screen-versus[data-lan-environment="android"] :is(#net-qr, #net-copy, #net-address-row) { display: none; }
+.net-seats { display: grid; align-content: center; gap: 1.05cqw; }
+.net-seat {
+  display: grid;
+  grid-template-columns: 4.2cqw minmax(4cqw, 1fr) auto;
+  align-items: center;
+  gap: .65cqw;
+  min-height: 4.3cqw;
+  padding: .64cqw .82cqw;
+  border: 1px solid #9c534e99;
+  border-left: .32cqw solid #e76b74;
+  border-radius: .5cqw;
+  background: #60273554;
+}
+.net-seat-gold { border-color: #b68454a8; border-left-color: #e9bc70; background: #63422247; }
+.net-seat b { color: #ff9e9f; font-size: 1.54cqw; }
+.net-seat-gold b { color: #ffcf87; }
+.net-seat strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.58cqw; }
+.net-seat span { color: var(--room-muted); white-space: nowrap; font-size: 1.18cqw; font-variant-numeric: tabular-nums; }
+.net-seat span[data-connected="true"] { color: #efe0be; }
+.net-lobby-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .85cqw;
+}
+#net-watchers { margin-right: auto; color: var(--room-muted); font-size: 1.33cqw; }
+.net-clipboard { position: absolute; inset: auto auto 0 0; width: 3px; height: 3px; opacity: 0; }
+.net-reconnect {
+  position: absolute;
+  z-index: 46;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #170e16bd;
+}
+.net-reconnect .net-pane {
+  display: grid;
+  justify-items: center;
+  width: 52cqw;
+  gap: 1.8cqw;
+  padding: 3cqw;
+  color: #ffeddb;
+  text-align: center;
+  font-size: 1.7cqw;
+}
+.net-reconnect .net-drop-message { color: #ffd28c; font: 700 3cqw/1.4 var(--title-font); }
+.net-reconnect .btn { font-size: 1.85cqw; }
+.net-notice {
+  position: absolute;
+  z-index: 47;
+  top: 1.5cqw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .65cqw 1.48cqw;
+  border: 1px solid #e1a35d;
+  border-radius: .7cqw;
+  color: #ffe1a7;
+  background: #361621f5;
+  font-size: 1.8cqw;
+  white-space: nowrap;
+  pointer-events: none;
+}
+#screen-versus :is(button, input, select, a):focus-visible, .net-reconnect button:focus-visible {
+  outline: 2px solid #ffe1a0;
+  outline-offset: 3px;
+}

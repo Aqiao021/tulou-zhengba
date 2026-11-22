@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">土楼争霸 · 福字拟形徽章</title>
+
+  <!-- The angular cuts are part of the die line, with transparent canvas outside. -->
+  <path fill="#14100E" stroke="#14100E" stroke-width="8" stroke-linejoin="miter" d="M 256.00 17.00 A 239 239 0 0 1 403.14 67.67 L 413.97 108.69 L 444.33 108.86 A 239 239 0 0 1 444.33 403.14 L 403.31 413.97 L 403.14 444.33 A 239 239 0 0 1 108.86 444.33 L 98.03 403.31 L 67.67 403.14 A 239 239 0 0 1 67.67 108.86 L 108.69 98.03 L 108.86 67.67 A 239 239 0 0 1 256.00 17.00 Z"/>
+  <path fill="#F5B316" d="M 256.00 17.00 A 239 239 0 0 1 403.14 67.67 L 413.97 108.69 L 444.33 108.86 A 239 239 0 0 1 444.33 403.14 L 403.31 413.97 L 403.14 444.33 A 239 239 0 0 1 108.86 444.33 L 98.03 403.31 L 67.67 403.14 A 239 239 0 0 1 67.67 108.86 L 108.69 98.03 L 108.86 67.67 A 239 239 0 0 1 256.00 17.00 Z"/>
+  <path fill="#14100E" transform="translate(256 256) scale(.955) translate(-256 -256)" d="M 256.00 17.00 A 239 239 0 0 1 403.14 67.67 L 413.97 108.69 L 444.33 108.86 A 239 239 0 0 1 444.33 403.14 L 403.31 413.97 L 403.14 444.33 A 239 239 0 0 1 108.86 444.33 L 98.03 403.31 L 67.67 403.14 A 239 239 0 0 1 67.67 108.86 L 108.69 98.03 L 108.86 67.67 A 239 239 0 0 1 256.00 17.00 Z"/>
+  <path fill="none" stroke="#C8102E" stroke-width="7"
+        d="M109 110 A207 207 0 0 1 405 112 M404 401 A207 207 0 0 1 109 402"/>
+  <path fill="#C8102E" d="M54 241 H79 L70 253 H47 Z M433 259 H458 L451 271 H426 Z"/>
+
+  <!-- 礻: the plume is the first dot; the sleeve and robe form the descending hook. -->
+  <g stroke="#14100E" stroke-width="9" stroke-linejoin="round">
+    <path fill="#C8102E"
+          d="M129 120 L147 101 L165 104 L172 89 L198 96 L185 122 L170 137 L152 129 Z"/>
+    <path fill="#F5B316"
+          d="M94 172 L119 151 L149 149 L164 138 L186 143 L200 152 L215 149 L222 165
+             L180 216 L176 231 L180 319 L173 351 L144 378 L147 340 L144 242
+             L121 260 L94 264 L107 243 L162 177 L106 187 Z"/>
+    <path fill="#F5B316" d="M185 209 L216 229 L230 251 L206 248 L181 230 Z"/>
+  </g>
+  <path fill="#C8102E" d="M146 151 L163 139 L185 143 L202 151 L210 148 L201 168 L187 179 L168 173 Z"/>
+  <path fill="#14100E" d="M153 157 L170 150 L191 155 L197 162 L184 173 L171 168 L160 169 Z"/>
+  <path fill="#FFFFFF" d="M166 157 L187 158 L183 163 L170 164 Z"/>
+  <path fill="#C8102E" d="M158 232 L170 221 L172 312 L168 337 L154 352 L158 321 Z"/>
+  <path fill="#14100E" d="M145 245 L162 229 L170 230 L162 246 L146 258 Z"/>
+
+  <!-- 畐: swallowtail ridge, a circular tulou wall, and the four-part courtyard. -->
+  <path fill="#F5B316" stroke="#14100E" stroke-width="7" stroke-linejoin="round"
+        d="M237 125 Q252 119 257 102 Q269 123 283 128 H380 Q394 123 405 102 Q410 119 426 125
+           L411 144 L389 153 H275 L252 144 Z"/>
+  <path fill="#C8102E"
+        d="M247 128 L258 115 Q271 131 284 135 H379 Q393 131 405 115 L416 128
+           L404 139 L387 144 H278 L261 138 Z"/>
+  <circle cx="332" cy="207" r="49" fill="#F5B316"/>
+  <circle cx="332" cy="207" r="32" fill="#14100E"/>
+  <path fill="none" stroke="#14100E" stroke-width="2"
+        d="M312 165 L316 172 M290 187 L298 190 M352 165 L348 172 M374 187 L366 190
+           M290 227 L298 224 M312 249 L316 242 M374 227 L366 224 M352 249 L348 242"/>
+  <path fill="#C8102E" d="M326 158 H338 V175 H326 Z M326 239 H338 V256 H326 Z M283 201 H300 V213 H283 Z M364 201 H381 V213 H364 Z"/>
+
+  <path fill="#F5B316" d="M258 269 H407 L418 280 V371 L405 384 H258 L246 372 V282 Z"/>
+  <path fill="#14100E" d="M267 283 H398 L403 288 V362 L398 369 H266 L261 363 V290 Z"/>
+  <path fill="#F5B316" d="M325 279 H339 V373 H325 Z M260 319 H406 V333 H260 Z"/>
+  <circle cx="332" cy="326" r="18" fill="#F5B316" stroke="#14100E" stroke-width="4"/>
+  <path fill="#C8102E" d="M332 314 L344 326 L332 338 L320 326 Z"/>
+  <path fill="#FFFFFF" d="M332 321 L337 326 L332 331 L327 326 Z"/>
+</svg>
